@@ -16,7 +16,34 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+//    Creating integers in this format allows them to be entered into objects and arrays
+    NSNumber *numInt = [NSNumber numberWithInt:5];
+    NSNumber *numInt2 = [NSNumber numberWithInt:10];
+    
+//    Adding the two integers together and logging
+    NSNumber *sum = [NSNumber numberWithInt:(numInt.intValue) + (numInt2.intValue)];
+    
+    NSLog(@"Sum: %@", sum);
+    
+//    Putting recently created integers into an array and logging
+    NSArray *arr = @[numInt, numInt2, sum];
+    
+    NSLog(@"Numbers: %@", arr);
+    
+    
+//    Multiplying two created integers and logging
+    NSNumber *sumNum = [NSNumber numberWithInt:(numInt.intValue) * (sum.intValue)];
+    
+    NSLog(@"Total: %@", sumNum);
+    
+//    Practice comparing two numbers
+    if (sum.intValue > numInt2.intValue) {
+        NSLog(@"This is a large number!");
+    } else {
+        NSLog(@"This number is small!");
+    }
+    
 }
 
 
